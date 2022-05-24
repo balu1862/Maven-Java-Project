@@ -17,16 +17,6 @@ pipeline {
             
         }
 
-	stage('SonarQube analysis') {
-         
-          steps{
-                echo "Sonar Scanner"
-                  sh "mvn clean compile"
-               withSonarQubeEnv('sonar-7') { 
-                 sh "mvn sonar:sonar "
-                }                     
-          }
-      }
 	    
       stage('Unit Test Cases') {
          
