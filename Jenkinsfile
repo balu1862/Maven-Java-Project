@@ -18,20 +18,7 @@ pipeline {
         }
 
 	    
-      stage('Unit Test Cases') {
-         
-          steps{
-	       echo "Clean and Test"
-              sh "mvn clean test"  
-          }
-          post{
-              success{
-		      echo "Clean and Test"
-                  junit 'target/surefire-reports/*.xml'
-              }
-          }
-      }
-	    
+ 
       stage('Build Code') {
         
           steps{
