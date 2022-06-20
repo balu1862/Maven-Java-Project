@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
     - name: webapp
-      image: gvenkat/webapp1:latest
+      image: balu2143/webapp1:latest
       imagePullPolicy: Always
       ports:
         - containerPort: 8080
