@@ -23,7 +23,7 @@ pipeline {
         
           steps{
 	      unstash 'Source'
-              sh "mvn clean package"  
+              sh "mvn clean package Dmaven.test.skip=true"  
           }
       }
 	    
