@@ -50,9 +50,7 @@ pipeline {
 	steps{
 	      //Deploy to K8s Cluster 
               echo "Deploy to Staging Server"
-	      sshCommand remote: kops, command: "cd Maven-Java-Project; git pull"
-	      sshCommand remote: kops, command: "kubectl delete -f Maven-Java-Project/k8s-code/staging/app/deploy-webapp.yml"
-	      sshCommand remote: kops, command: "kubectl apply -f Maven-Java-Project/k8s-code/staging/app/."
+	      sh "kubectl apply -f ./k8s-code/staging/app/."
 	}		    
     }
 	    
