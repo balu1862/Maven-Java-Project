@@ -25,7 +25,7 @@ pipeline {
 	      unstash 'Source'
               sh "mvn clean package"  
           }
-        
+      }
 	    
       stage('Build Docker Image') {
          
