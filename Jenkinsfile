@@ -35,7 +35,7 @@ pipeline {
       stage('Build Docker Image') {
          
          steps{
-                  sh "docker build -t gvenkat/webapp1 ."  
+                  sh "docker build -t balu2143/webapp1 ."  
          }
      }
 	    
@@ -46,7 +46,7 @@ pipeline {
     	      withCredentials([usernamePassword(credentialsId: 'docker-hub', passwordVariable: 'dockerPassword', usernameVariable: 'dockerUser')]) {
     		    sh "docker login -u ${dockerUser} -p ${dockerPassword}"
 	      }
-        	sh "docker push gvenkat/webapp1"
+        	sh "docker push balu2143/webapp1"
          }
     }
 	    
