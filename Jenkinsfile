@@ -25,12 +25,7 @@ pipeline {
 	      unstash 'Source'
               sh "mvn clean package"  
           }
-          post{
-              success{
-                  archiveArtifacts '**/*.war'
-              }
-          }
-      }
+        
 	    
       stage('Build Docker Image') {
          
