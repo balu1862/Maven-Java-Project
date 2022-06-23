@@ -50,7 +50,7 @@ pipeline {
 	steps{
 	      //Deploy to K8s Cluster 
               echo "Deploy to Staging Server"
-	      sh "kubectl apply -f ./k8s-code/staging/app/."
+	      sh "su - ubuntu && kubectl apply -f ./k8s-code/staging/app/."
 	}		    
     }
 	    
